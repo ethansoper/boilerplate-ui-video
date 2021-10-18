@@ -1,0 +1,46 @@
+{
+
+    "extends": [
+        "standard",
+        "plugin:react/recommended"
+    ],
+
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+
+    "env": {
+        "es6": true,
+        "node": true
+    },
+
+    "plugins": [
+        "import",
+        "node",
+        "promise",
+        "standard"
+    ],
+
+    "rules": {
+        "react/display-name": 0,
+        "array-callback-return": 0,
+        "no-case-declartions": 0,
+        "space-before-function-paren":"off",
+        "indent": [2, "tab", {
+            "SwitchCase": 1
+        }],
+        "no-prototype-builtins": "off",
+        "no-tabs": 0,
+        "no-throw-literal": "off",
+        "semi": [2, "always"]
+    }
+}

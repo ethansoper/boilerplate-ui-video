@@ -1,0 +1,9 @@
+export const AUTH_USER = 'user/AUTH_USER';
+export const AUTH_USER_COMPLETED = 'user/AUTH_USER_COMPLETED';
+export const AUTH_USER_FAILED = 'user/AUTH_USER_FAILED';
+
+export const AUTH_USER_SESSION = 'user/AUTH_USER_SESSION';
+export const AUTH_USER_SESSION_COMPLETED = 'user/AUTH_USER_SESSION_COMPLETED';
+export const AUTH_USER_SESSION_FAILED = 'user/AUTH_USER_SESSION_FAILED';
+
+export const DE_AUTH_USER = 'user/DE_AUTH_USER';
