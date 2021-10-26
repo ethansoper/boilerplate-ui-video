@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
 // import Amplify from 'aws-amplify';
-import config from './config';
+// import config from './config';
 
 // import 'react-grid-layout/css/styles.css';
 // import 'react-resizable/css/styles.css';

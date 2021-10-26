@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
-import Container from '@material-ui/core/Container';
-import { withStyles } from '@material-ui/styles';
+import Container from '@mui/material/Container';
+import { withStyles } from '@mui/styles';
 import PropTypes from 'prop-types';
 
 const styles = (theme) => ({
@@ -20,7 +20,10 @@ const styles = (theme) => ({
 });
 
 const Footer = (props) => {
-	const { classes, t } = props;
+	const {
+		classes
+		// t
+	} = props;
 	const { root } = classes;
 	const location = useLocation();
 	const history = useHistory();

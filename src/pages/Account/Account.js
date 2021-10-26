@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withStyles } from '@material-ui/styles';
+import { withStyles } from '@mui/styles';
 import PropTypes from 'prop-types';
-import Container from '@material-ui/core/Container';
+import Container from '@mui/material/Container';
 
 const styles = (theme) => ({
 	root: {

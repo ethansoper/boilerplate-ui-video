@@ -1,16 +1,16 @@
-import React, { Fragment, useCallback, useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import Link from '@material-ui/core/Link';
-import { withStyles } from '@material-ui/styles';
+import Link from '@mui/material/Link';
+import { withStyles } from '@mui/styles';
 import PropTypes from 'prop-types';
 import { userActions } from '../../containers/User';
 import PasswordValidationInput from '../../validation/inputs/passwordValidationInput';
 
-import Button from '@material-ui/core/Button';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Container from '@material-ui/core/Container';
-import Paper from '@material-ui/core/Paper';
-import TextField from '@material-ui/core/TextField';
+import Button from '@mui/material/Button';
+import CircularProgress from '@mui/material/CircularProgress';
+import Container from '@mui/material/Container';
+import Paper from '@mui/material/Paper';
+import TextField from '@mui/material/TextField';
 
 const styles = (theme) => ({
 	pageContainer: {
@@ -21,7 +21,7 @@ const styles = (theme) => ({
 		width: '100%',
 		alignItems: 'center',
 		background:
-			'linear-gradient(315deg, hsla(130, 52%, 81%, 1) 0%, hsla(176, 57%, 89%, 1) 100%)'
+			'linear-gradient(114deg, rgba(57,181,221,1) 0%, rgba(35,111,135,1) 100%)'
 	},
 	container: {
 		display: 'flex',
@@ -93,7 +93,7 @@ const Login = (props) => {
 	checkForChallengeNames(challengeName, props.history);
 
 	const [hasValidationErrors, setHasValidationErrors] = useState(false);
-	const [userInfo, setUserInfo] = useState({});
+	const [userInfo] = useState({});
 	const [passwordInput, setPasswordInput] = useState('');
 
 	if (isAuthed) {
@@ -179,7 +179,7 @@ const Login = (props) => {
 									href="/forgot-password"
 									onClick={(e) => e.preventDefault}
 								>
-									{t('pages.login.forgot-password.label')}
+									{t('pages.login.forgot-password')}
 								</Link>
 								<Link
 									className={textField}

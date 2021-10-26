@@ -1,7 +1,7 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
-import Container from '@material-ui/core/Container';
-import { withStyles } from '@material-ui/styles';
+import Container from '@mui/material/Container';
+import { withStyles } from '@mui/styles';
 import PropTypes from 'prop-types';
 
 const styles = (theme) => ({

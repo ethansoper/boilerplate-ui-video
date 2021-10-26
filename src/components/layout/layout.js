@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { SnackbarProvider } from 'notistack';
-import { withStyles } from '@material-ui/styles';
+import { withStyles } from '@mui/styles';
 
 import Theme from '../Theme';
 import SideNavbar from './SideNavbar';
 import Footer from './Footer';
 import NotificationCenter from '../notificationCenter';
-// import ScreenshotWrapper from '../Screenshotter';
 
 const styles = (theme) => ({
 	dashboardContentWrapper: {
@@ -22,8 +21,7 @@ const styles = (theme) => ({
 	splashContentWrapper: {
 		display: 'flex',
 		flexDirection: 'column',
-		height: '100vh',
-		paddingBottom: '2.5rem'
+		height: '100vh'
 	},
 	splashPageContent: {
 		position: 'relative',
@@ -33,16 +31,14 @@ const styles = (theme) => ({
 
 class Layout extends Component {
 	_renderDashboardLayout() {
-		const { children, classes, location } = this.props;
+		const { children, classes } = this.props;
 		const { dashboardContentWrapper, dashboardPageContent } = classes;
 
 		return (
 			<div className={dashboardPageContent}>
 				<div className={dashboardContentWrapper}>
 					<SideNavbar />
-					{/* <ScreenshotWrapper label={location.pathname.replace('/', '')}> */}
 					{children}
-					{/* </ScreenshotWrapper> */}
 				</div>
 			</div>
 		);

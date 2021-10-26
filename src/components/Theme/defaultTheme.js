@@ -1,4 +1,4 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme } from '@mui/material/styles';
 
 const defaultTheme = {
 	palette: {
@@ -27,4 +27,4 @@ const defaultTheme = {
 	}
 };
 
-export default createMuiTheme(defaultTheme);
+export default createTheme(defaultTheme);
