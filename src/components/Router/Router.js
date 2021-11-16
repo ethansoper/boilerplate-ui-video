@@ -10,6 +10,7 @@ import AccountPage from '../../pages/Account';
 import DashboardPage from '../../pages/Dashboard';
 import DownloadPage from '../../pages/Download';
 // import Home from '../../pages/Home';
+import SplashPage from '../../pages/Splash';
 import LoginPage from '../../pages/Login';
 import UsersPage from '../../pages/Users';
 
@@ -44,6 +45,11 @@ class AppRouter extends Component {
 						exact
 						path="/:year/download"
 						render={(props) => <DownloadPage {...props} />}
+					/>
+					<Route
+						exact
+						path="/splash"
+						render={(props) => <SplashPage {...props} />}
 					/>
 					<PrivateRoute
 						exact
