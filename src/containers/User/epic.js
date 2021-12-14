@@ -40,11 +40,15 @@ export const authUserSessionEpic = (action$) =>
 		ofType(AUTH_USER_SESSION),
 		mergeMap(async (action) => {
 			try {
-				const session = await Auth.currentSession();
-				const user = await Auth.currentAuthenticatedUser();
-				axios.defaults.headers.common.Authorization = session
-					.getIdToken()
-					.getJwtToken();
+				// const session = await Auth.currentSession();
+				// const user = await Auth.currentAuthenticatedUser();
+				// axios.defaults.headers.common.Authorization = session
+				// 	.getIdToken()
+				// 	.getJwtToken();
+
+				const user = {
+					username: 'esoper'
+				};
 
 				return authUserSessionCompleted(user);
 			} catch (e) {

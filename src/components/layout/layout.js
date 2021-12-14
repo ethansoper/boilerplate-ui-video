@@ -5,18 +5,20 @@ import { SnackbarProvider } from 'notistack';
 import { withStyles } from '@mui/styles';
 
 import Theme from '../Theme';
-import SideNavbar from './SideNavbar';
+import Navbar from './Navbar';
 import Footer from './Footer';
 import NotificationCenter from '../notificationCenter';
 
 const styles = (theme) => ({
 	dashboardContentWrapper: {
 		display: 'flex',
+		flexDirection: 'column',
 		width: '100vw'
 	},
 	dashboardPageContent: {
 		display: 'flex',
-		minHeight: '100vh'
+		minHeight: '100vh',
+		overflow: 'hidden'
 	},
 	splashContentWrapper: {
 		display: 'flex',
@@ -37,7 +39,7 @@ class Layout extends Component {
 		return (
 			<div className={dashboardPageContent}>
 				<div className={dashboardContentWrapper}>
-					<SideNavbar />
+					<Navbar />
 					{children}
 				</div>
 			</div>

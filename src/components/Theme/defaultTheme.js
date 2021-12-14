@@ -1,6 +1,13 @@
 import { createTheme } from '@mui/material/styles';
 
 const defaultTheme = {
+	panel: {
+		height: '3.25rem',
+		width: '230px'
+	},
+	typography: {
+		fontFamily: ['Montserrat', 'sans-serif'].join(',')
+	},
 	palette: {
 		background: {
 			default: '#ffffff'

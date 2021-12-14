@@ -41,6 +41,8 @@
         "no-prototype-builtins": "off",
         "no-tabs": 0,
         "no-throw-literal": "off",
-        "semi": [2, "always"]
+        "semi": [2, "always"],
+        "no-empty":"warn",
+        "no-unused-vars": "warn"
     }
 }

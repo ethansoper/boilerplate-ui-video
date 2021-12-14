@@ -1,67 +1,66 @@
-import React, { Fragment } from 'react';
-import Container from '@material-ui/core/Container';
-import Button from '@material-ui/core/Button';
-import { withStyles } from '@material-ui/styles';
+import React from 'react';
+import { withStyles } from '@mui/styles';
+import { withTranslation } from 'react-i18next';
+import Container from '@mui/material/Container';
 import PropTypes from 'prop-types';
 
+import MessageCenter from './partials/messageCenter';
+import NavProfile from './partials/navProfile';
+import SearchBar from './partials/SearchBar';
+
 const styles = (theme) => ({
-	auth: {
+	leftContainer: {
 		display: 'flex',
-		margin: '10px',
-		'& a': {
-			textTransform: 'none',
-			backgroundColor: theme.palette.secondary.main,
-			marginLeft: '8px'
-		}
+		border: '1px dotted blue',
+		width: theme.panel.width
 	},
-	greeting: {
+	centerContainer: {
 		display: 'flex',
-		alignItems: 'center',
-		'& p': {
-			marginRight: '20px'
-		}
+		border: '1px dotted red',
+		flex: '1'
 	},
-	registerButton: {
-		textTransform: 'none',
-		color: 'white'
-	},
-	nav: {
+	rightContainer: {
 		display: 'flex',
-		'& a': {
-			textTransform: 'none'
-		}
+		border: '1px dotted orange',
+		width: theme.panel.width
+	},
+	logo: {
+		borderRight: '1px solid white'
 	},
 	root: {
 		display: 'flex',
 		justifyContent: 'space-between',
-		minHeight: '3.25rem',
-		backgroundColor: '#fafafa'
-	}
+		minHeight: theme.panel.height,
+		backgroundColor: '#fafafa',
+		padding: '0px',
+		margin: '0px'
+	},
+	searchSection: {}
 });
 
 const Navbar = (props) => {
-	const { classes, t } = props;
-	const { auth, nav, registerButton, root } = classes;
+	const { classes } = props;
+	const {
+		centerContainer,
+		leftContainer,
+		logo,
+		rightContainer,
+		root
+	} = classes;
 
 	return (
-		<Container className={root}>
-			<div className={nav}>
-				<Button href="/">{t('components.layout.Navbar.routes.home')}</Button>
+		<Container maxWidth={false} className={root}>
+			<div className={leftContainer}>
+				<div className={logo}>
+					<p>App Name</p>
+				</div>
 			</div>
-			<div className={auth}>
-				<Fragment>
-					<Button
-						className={registerButton}
-						to="/register"
-						variant="contained"
-						color="primary"
-					>
-						{t('components.layout.Navbar.routes.register')}
-					</Button>
-					<Button href="/login">
-						{t('components.layout.Navbar.routes.log-in')}
-					</Button>
-				</Fragment>
+			<div className={centerContainer}>
+				<MessageCenter />
+				<SearchBar />
+			</div>
+			<div className={rightContainer}>
+				<NavProfile />
 			</div>
 		</Container>
 	);
@@ -72,4 +71,4 @@ Navbar.propTypes = {
 	t: PropTypes.func
 };
 
-export default withStyles(styles)(Navbar);
+export default withStyles(styles)(withTranslation()(Navbar));

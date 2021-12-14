@@ -1,3 +1,3 @@
-# Sims Services Dashboard
+# Boilerplate Dashboard
 
 TODO: This description
